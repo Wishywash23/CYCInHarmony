@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYC In Harmony</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100px;
+        }
+        nav {
+            text-align: center;
+            background-color: #34495e;
+        }
+        nav a {
+            color: white;
+            padding: 1em;
+            display: inline-block;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+        main {
+            padding: 2em;
+            text-align: left;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 4em;
+		}
+        footer img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100px;
+        }
+        section {
+            padding: 1em 0;
+            margin-bottom: 1em;
+        }
+        .wrapped-img {
+            float: left;
+            margin-right: 1em;
+            max-width: 200px;
+            height: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Pictures/choir logo clear.png" alt="Choir Logo">
+        <h1>CYC In Harmony Events</h1>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Events.html">Events</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="#">Membership</a>
+        <a href="#">Contact</a>
+        <a href="#">Standards & Policies</a>
+    </nav>
+    <main>
+        <section class="clearfix">
+            <h2>Upcoming Events</h2>
+            <p>Coming Soon... We're currently learning new music and will be making announcements on performances soon.</p>
+        </section>
+        <section class="clearfix">
+            <h2>Previous Events</h2>
+            <p>We are a new Choir - give us a chance and you'll see plenty here in the future.</p>
+        </section>
+        <section>
+            <!-- Content here -->
+        </section>
+    </main>
+    <footer>
+		<p>Follow us on Facebook<p> <a href="https://www.facebook.com/profile.php?id=61571809795822"> <img src="Pictures/FB.png" alt="Facebook">
+        <p>&copy; 2025 CYC In Harmony. All rights reserved.</p>
+    </footer>
+	<script>
+        async function fetchTextFile(url, elementId) {
+            const response = await fetch(url);
+            const text = await response.text();
+            document.getElementById(elementId).innerText = text;
+        }
+        // Fetch content for different sections
+        fetchTextFile('Text files/Sue Hallam.txt', 'sue-hallam-content');
+        fetchTextFile('Text files/History.txt', 'history-content');
+    </script>
+</body>
+</html>
+
