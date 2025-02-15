@@ -38,7 +38,7 @@
         }
         main {
             padding: 2em;
-            text-align: left;
+            text-align: center;
         }
         footer {
             background-color: #2c3e50;
@@ -74,12 +74,26 @@
             clear: both;
             display: table;
         }
+		main.two-columns {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2em;
+			padding: 2em;
+		}
+		.column {
+			background-color: white;
+			padding: 1em;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.column h2 {
+			margin-top: 0;
+		}
     </style>
 </head>
 <body>
     <header>
         <img src="Pictures/choir logo clear.png" alt="Choir Logo">
-        <h1>CYC In Harmony Events</h1>
+        <h1>Joining CYC In Harmony</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -90,17 +104,38 @@
 		<a href="contact.html">Contact</a>
 		<a href="standards.html">Standards & Policies</a>
     </nav>
-    <main>
-        <section class="clearfix">
-            <h2>Upcoming Events</h2>
-            <p>Coming Soon... We're currently learning new music and will be making announcements on performances soon.</p>
-        </section>
-        <section class="clearfix">
-            <h2>Previous Events</h2>
-            <p>We are a new Choir - give us a chance and you'll see plenty here in the future.</p>
-        </section>
-        <section>
-            <!-- Content here -->
+	<nav>
+        <a href="Membership.html">Becoming a Member</a>
+        <a href="Fees.html">Fees and Term dates</a>
+	</nav>
+    <main class="two-columns">
+        <section class="column">
+            <h2>Choir Fees - 2025</h2>
+			<p style="font-weight: bold">Choir membership - £45 per term.<p>
+			<p>This fee covers rental of the rehearsal space, purchase of new music, performance venues and Ticket & Marketing Printing.<p>
+			<p style="font-weight: bold">Amateur Choir Licence membership - £10 per year.<p>
+			<p>All members are required to pay into the annual licence membership - this allows us to provide copies of the music to members.<p>
+			<p>We will provide scans of the music <strong>that you are required to print out bring with you<strong> to rehearsals.<p>
+			<p><br><p>
+			<p><br><p>
+			<p> Fees are always to be paid by the first rehearsal of the current term - If you have ANY issues making these payments, please reach out to a committee member - We are here to help :)
+		</section>
+        <section class="column">
+            <h2>Current Term Dates - 2025</h2>
+			<p style="font-weight: bold;">TERM 1<p>
+			<p>Jan - 10th and 24th<p>
+			<p>Feb - 7th and 21st<p>
+			<p>March - 7th and 21st<p>
+			<p>April - 11th<p>
+			<p style="font-weight: bold;">End of term<br><br><p>
+			<p style="font-weight: bold;">TERM 2<p>
+			<p>April - 25th<p>
+			<p>May - 9th and 23rd<p>
+			<p>June - 6th and 20th<p>
+			<p>July - 4th and 18th<p>
+			<p style="font-weight: bold;">End of term<br><br><p>
+			<p style="font-weight: bold;">TERM 3<p>
+			<p style="font-weight: bold;">TBC<br><br><p>
         </section>
     </main>
     <footer>
@@ -116,6 +151,7 @@
         // Fetch content for different sections
         fetchTextFile('Text files/Sue Hallam.txt', 'sue-hallam-content');
         fetchTextFile('Text files/History.txt', 'history-content');
+		fetchTextFile('Text files/Treona.txt', 'treona-content');
     </script>
 </body>
 </html>
